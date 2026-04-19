@@ -26,7 +26,6 @@
     padding: 0 20px;
   }
 
-  /* Cabeçalho com animação no logo */
   .header {
     padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -50,7 +49,6 @@
     100% { filter: drop-shadow(0 0 0px rgba(255, 102, 0, 0)); }
   }
 
-  /* Botões */
   .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -85,7 +83,17 @@
     transform: translateY(-2px);
   }
 
-  /* Seções */
+  .btn-whatsapp {
+    background: #25D366;
+    border-color: #25D366;
+    color: white;
+  }
+
+  .btn-whatsapp:hover {
+    background: #1da15f;
+    transform: translateY(-2px);
+  }
+
   .section {
     padding: 60px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -107,7 +115,6 @@
     margin: 0 auto 40px;
   }
 
-  /* Cards */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,7 +148,6 @@
     margin-bottom: 12px;
   }
 
-  /* Vídeos */
   .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -154,7 +160,6 @@
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: 0.2s;
   }
 
   .video-card video {
@@ -172,7 +177,6 @@
     color: #FF6600;
   }
 
-  /* Tabela */
   .table-wrapper {
     overflow-x: auto;
     margin: 30px 0;
@@ -202,7 +206,6 @@
     border-bottom: none;
   }
 
-  /* CTA principal */
   .cta {
     text-align: center;
     background: linear-gradient(135deg, #FF6600, #E65C00);
@@ -227,6 +230,7 @@
   .cta .btn {
     background: #0a0a0a;
     color: #FF6600;
+    margin: 8px;
   }
 
   .cta .btn:hover {
@@ -234,7 +238,6 @@
     color: #FF6600;
   }
 
-  /* Rodapé */
   .footer {
     padding: 40px 0;
     text-align: center;
@@ -248,6 +251,14 @@
     }
     .cards-grid {
       gap: 20px;
+    }
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-buttons .btn {
+      width: 80%;
+      margin: 8px auto;
     }
   }
 </style>
@@ -267,8 +278,11 @@
       <div style="text-align: center; max-width: 800px; margin: 0 auto;">
         <h1 class="section-title">Carteira MRP Mobi: Cashback que vira renda</h1>
         <p style="font-size: 1.2rem; margin-bottom: 32px;">Prepare-se para a revolução da mobilidade e do comércio local. Cadastre-se gratuitamente e comece a ganhar hoje.</p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <div class="hero-buttons" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="https://convite.mrpmobi.com.br/register/747" class="btn btn-primary">Quero me cadastrar →</a>
+          <a href="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." class="btn btn-whatsapp">
+            📱 Falar com Vam Barbosa
+          </a>
           <a href="#" class="btn btn-secondary" id="saibaMaisBtn">Saiba mais</a>
         </div>
       </div>
@@ -416,7 +430,10 @@
     <div class="cta">
       <h2>Pronto para começar?</h2>
       <p>Cadastro 100% gratuito. Você não precisa pagar nada para participar.</p>
-      <a href="https://convite.mrpmobi.com.br/register/747" class="btn">Quero me cadastrar agora →</a>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;">
+        <a href="https://convite.mrpmobi.com.br/register/747" class="btn">Quero me cadastrar agora →</a>
+        <a href="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." class="btn" style="background: #25D366; color: white; border-color: #25D366;">💬 Falar com Vam Barbosa</a>
+      </div>
     </div>
   </div>
 
@@ -443,13 +460,11 @@
 </footer>
 
 <script>
-  // Rolar para a seção de vídeos ao clicar em "Saiba mais"
   document.getElementById('saibaMaisBtn').addEventListener('click', function(e) {
     e.preventDefault();
     document.querySelector('.videos-grid').scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Botão da agência (WhatsApp Mais Talentto)
   const agenciaBtn = document.getElementById('agenciaBtn');
   const mensagem = `Olá! Vim pela página do Vam Barbosa (MRP Mobi) e quero saber mais sobre as landing pages da Mais Talentto.`;
   agenciaBtn.href = `https://wa.me/5522998259862?text=${encodeURIComponent(mensagem)}`;
