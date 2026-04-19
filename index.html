@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vam Barbosa · MRP Mobi</title>
+<!-- Google Fonts: Inter e Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Cabeçalho com animação no logo */
+  .header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 180px;
+    height: auto;
+    animation: softGlow 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.02);
+  }
+
+  @keyframes softGlow {
+    0% { filter: drop-shadow(0 0 0px rgba(255, 102, 0, 0)); }
+    50% { filter: drop-shadow(0 0 6px rgba(255, 102, 0, 0.6)); }
+    100% { filter: drop-shadow(0 0 0px rgba(255, 102, 0, 0)); }
+  }
+
+  /* Botões */
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: #FF6600;
+    color: #0a0a0a;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background: #E65C00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #FF6600;
+    border: 1px solid #FF6600;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 102, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Seções */
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+
+  /* Cards */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background: #111;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 102, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  /* Vídeos */
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .video-card {
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.2s;
+  }
+
+  .video-card video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .video-label {
+    padding: 12px;
+    font-weight: 500;
+    background: #1a1a1a;
+    font-size: 0.85rem;
+    color: #FF6600;
+  }
+
+  /* Tabela */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 30px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  th {
+    background: #1a1a1a;
+    font-weight: 600;
+    color: #FF6600;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* CTA principal */
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #FF6600, #E65C00);
+    border-radius: 28px;
+    padding: 48px 24px;
+    margin: 40px 0;
+  }
+
+  .cta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #0a0a0a;
+  }
+
+  .cta p {
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .cta .btn {
+    background: #0a0a0a;
+    color: #FF6600;
+  }
+
+  .cta .btn:hover {
+    background: #1a1a1a;
+    color: #FF6600;
+  }
+
+  /* Rodapé */
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+    .cards-grid {
+      gap: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <img src="https://tvpronta.com/logo-mrp.png" alt="MRP Mobi" class="logo">
+  </div>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h1 class="section-title">Carteira MRP Mobi: Cashback que vira renda</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 32px;">Prepare-se para a revolução da mobilidade e do comércio local. Cadastre-se gratuitamente e comece a ganhar hoje.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://convite.mrpmobi.com.br/register/747" class="btn btn-primary">Quero me cadastrar →</a>
+          <a href="#" class="btn btn-secondary" id="saibaMaisBtn">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O que é a MRP Mobi -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">O que é a MRP Mobi?</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">Aplicativo de Mobilidade</h3>
+          <p>Conectamos motoristas e passageiros com taxas justas. Motoristas ficam com 79% da corrida, enquanto a MRP retém 21% para administração e distribuição de renda.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3 class="card-title">Carteira Digital</h3>
+          <p>Use seu saldo para pagar compras em estabelecimentos parceiros e ganhe cashback imediato de até 30%.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3 class="card-title">Renda em Rede</h3>
+          <p>Até 7 níveis de indicação. Você ganha sempre que sua rede utiliza o app ou faz compras com a carteira.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeos explicativos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Entenda na prática</h2>
+      <div class="videos-grid">
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="https://tvpronta.com/cashback.mp4" type="video/mp4">
+          </video>
+          <div class="video-label">🎥 Como funciona o cashback</div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="https://tvpronta.com/cashback-2.mp4" type="video/mp4">
+          </video>
+          <div class="video-label">🎥 Depoimentos e casos reais</div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="https://tvpronta.com/cadastro-cnpj.mp4" type="video/mp4">
+          </video>
+          <div class="video-label">🏢 Para empresários: cadastre seu CNPJ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modelo de cashback -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Como funciona o cashback?</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3 class="card-title">1. Empresário oferece desconto</h3>
+          <p>Você define o percentual (ex: 10%). Esse valor vai para a carteira MRP Mobi.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">2. Cliente ganha cashback imediato</h3>
+          <p>30% do valor do desconto volta para o cliente na hora.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">3. O restante é distribuído em rede</h3>
+          <p>45% do valor retido pela MRP é dividido entre os indicadores (até o 7º nível). Os outros 55% são da MRP.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Matriz de distribuição -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Distribuição dos ganhos</h2>
+      <p class="section-subtitle">Do valor que fica com a MRP (45% do desconto), a distribuição é:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Nível</th><th>Percentual</th><th>Exemplo: R$ 100 em descontos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1º nível</td><td>10%</td><td>R$ 4,50</td></tr>
+            <tr><td>2º nível</td><td>10%</td><td>R$ 4,50</td></tr>
+            <tr><td>3º nível</td><td>5%</td><td>R$ 2,25</td></tr>
+            <tr><td>4º nível</td><td>5%</td><td>R$ 2,25</td></tr>
+            <tr><td>5º nível</td><td>5%</td><td>R$ 2,25</td></tr>
+            <tr><td>6º nível</td><td>5%</td><td>R$ 2,25</td></tr>
+            <tr><td>7º nível</td><td>5%</td><td>R$ 2,25</td></tr>
+            <tr style="background:#1a1a1a;"><td colspan="2"><strong>Total distribuído</strong></td><td><strong>R$ 31,50</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align: center; font-size: 0.9rem; color: #aaa;">* 45% do valor retido pela MRP (R$ 70,00 no exemplo) é distribuído conforme a tabela.</p>
+    </div>
+  </section>
+
+  <!-- Simulação de ganhos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Potencial de ganhos</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3 class="card-title">🚀 Rede de 47 mil pessoas</h3>
+          <p>Com 10 motoristas diretos e cada um indicando mais 7, sua rede pode ultrapassar <strong>47.250 pessoas</strong> em poucos meses.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">📈 Renda passiva mensal</h3>
+          <p>Com apenas <strong>2 corridas de R$ 10 por mês</strong> por pessoa, o ganho da rede supera <strong>R$ 14.800/mês</strong> (exemplo da live oficial).</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">💎 Vitalício e hereditário</h3>
+          <p>Sua rede é um patrimônio que pode ser passado para herdeiros, gerando renda por gerações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Quem já está dentro</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <p>"Já temos mais de 30 mil cadastros. O escritório físico já está em funcionamento. Isso é real."</p>
+          <p style="margin-top: 16px; color: #FF6600;">— Ed Carlos, fundador</p>
+        </div>
+        <div class="card">
+          <p>"A MRP Mobi vai ser o divisor de águas na vida de quem acreditar. O negócio já está pronto, o app vai bombar."</p>
+          <p style="margin-top: 16px; color: #FF6600;">— Fábio Lopes, líder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <div class="container">
+    <div class="cta">
+      <h2>Pronto para começar?</h2>
+      <p>Cadastro 100% gratuito. Você não precisa pagar nada para participar.</p>
+      <a href="https://convite.mrpmobi.com.br/register/747" class="btn">Quero me cadastrar agora →</a>
+    </div>
+  </div>
+
+  <!-- Agência Mais Talentto -->
+  <section class="section">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="card" style="text-align: center;">
+          <h3 class="card-title">🚀 Mais Talentto</h3>
+          <p>Esta landing page foi criada pela <strong>Mais Talentto</strong>, agência especializada em IA e presença digital.</p>
+          <p>Quer ter sua própria página para divulgar a MRP Mobi? Fale conosco.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 16px;" id="agenciaBtn">Falar com a Mais Talentto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 MRP Mobi | Todos os direitos reservados.</p>
+    <p>Página criada pela Mais Talentto – Agência de IA e Presença Digital.</p>
+  </div>
+</footer>
+
+<script>
+  // Rolar para a seção de vídeos ao clicar em "Saiba mais"
+  document.getElementById('saibaMaisBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.videos-grid').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Botão da agência (WhatsApp Mais Talentto)
+  const agenciaBtn = document.getElementById('agenciaBtn');
+  const mensagem = `Olá! Vim pela página do Vam Barbosa (MRP Mobi) e quero saber mais sobre as landing pages da Mais Talentto.`;
+  agenciaBtn.href = `https://wa.me/5522998259862?text=${encodeURIComponent(mensagem)}`;
+</script>
+
+</body>
+</html>
