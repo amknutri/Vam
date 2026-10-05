@@ -263,6 +263,10 @@
     .cards-grid {
       gap: 20px;
     }
+    th, td {
+      padding: 10px 8px;
+      font-size: 0.85rem;
+    }
     .hero-buttons {
       flex-direction: column;
       align-items: center;
@@ -366,7 +370,7 @@
       </div>
       <div class="card">
         <h3 class="card-title">3. O restante é distribuído em rede</h3>
-        <p>45% do valor retido pela MRP é dividido entre os indicadores (até o 7º nível). Os outros 55% são da MRP.</p>
+        <p>Os outros 70% do desconto são divididos assim: 45% vão para os indicadores (até o 7º nível) e 55% ficam com a MRP.</p>
       </div>
     </div>
   </div>
@@ -376,25 +380,28 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title">Distribuição dos ganhos</h2>
-      <p class="section-subtitle">Do valor que fica com a MRP (45% do desconto), a distribuição é:</p>
+      <p class="section-subtitle">Exemplo real: compra de R$ 200,00 em um lojista que oferece 10% de desconto. O lojista recebe R$ 180,00 e R$ 20,00 vão para o sistema MRP.</p>
       <div class="table-wrapper">
         <table>
           <thead>
-            <tr><th>Nível</th><th>Percentual</th><th>Exemplo: R$ 100 em descontos</th></tr>
+            <tr><th>Destino</th><th>Percentual</th><th>Valor no exemplo</th></tr>
           </thead>
           <tbody>
-            <tr><td>1º nível</td><td>10%</td><td>R$ 4,50</td></tr>
-            <tr><td>2º nível</td><td>10%</td><td>R$ 4,50</td></tr>
-            <tr><td>3º nível</td><td>5%</td><td>R$ 2,25</td></tr>
-            <tr><td>4º nível</td><td>5%</td><td>R$ 2,25</td></tr>
-            <tr><td>5º nível</td><td>5%</td><td>R$ 2,25</td></tr>
-            <tr><td>6º nível</td><td>5%</td><td>R$ 2,25</td></tr>
-            <tr><td>7º nível</td><td>5%</td><td>R$ 2,25</td></tr>
-            <tr style="background:#1a1a1a;"><td colspan="2"><strong>Total distribuído</strong></td><td><strong>R$ 31,50</strong></td></tr>
+            <tr><td><strong>Cashback do cliente</strong></td><td>30% do desconto</td><td><strong>R$ 6,00</strong></td></tr>
+            <tr style="background:#1a1a1a;"><td colspan="3"><strong>Os outros 70% (R$ 14,00) são divididos assim:</strong></td></tr>
+            <tr><td>1º nível</td><td>10%</td><td>R$ 1,40</td></tr>
+            <tr><td>2º nível</td><td>10%</td><td>R$ 1,40</td></tr>
+            <tr><td>3º nível</td><td>5%</td><td>R$ 0,70</td></tr>
+            <tr><td>4º nível</td><td>5%</td><td>R$ 0,70</td></tr>
+            <tr><td>5º nível</td><td>5%</td><td>R$ 0,70</td></tr>
+            <tr><td>6º nível</td><td>5%</td><td>R$ 0,70</td></tr>
+            <tr><td>7º nível</td><td>5%</td><td>R$ 0,70</td></tr>
+            <tr style="background:#1a1a1a;"><td><strong>Total distribuído em rede</strong></td><td><strong>45%</strong></td><td><strong>R$ 6,30</strong></td></tr>
+            <tr><td>Carteira MRP</td><td>55%</td><td>R$ 7,70</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="text-align: center; font-size: 0.9rem; color: #aaa;">* 45% do valor retido pela MRP (R$ 70,00 no exemplo) é distribuído conforme a tabela.</p>
+      <p style="text-align: center; font-size: 0.9rem; color: #aaa;">* Os percentuais de cada nível são calculados sobre os 70% restantes do desconto (R$ 14,00 no exemplo). R$ 6,00 + R$ 6,30 + R$ 7,70 = R$ 20,00.</p>
     </div>
   </section>
 
