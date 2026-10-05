@@ -12,6 +12,8 @@ Landing page reutilizável para clientes da Mais Talentto. Um único arquivo (`i
 4. **Abra o arquivo no navegador** (dois cliques nele). Se aparecer uma **faixa vermelha no topo**, ela lista as marcações que ainda faltam preencher.
 5. **Publique** (veja a seção "Publicação" abaixo).
 
+> Exemplo pronto: veja `exemplos/vam-barbosa/index.html`, o template preenchido com os dados do Vam Barbosa (MRP Mobi).
+
 > Dica: guarde as respostas do cliente num bloco de notas, no mesmo formato da tabela. Assim o próximo cliente fica ainda mais rápido.
 
 ---
