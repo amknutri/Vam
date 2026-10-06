@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vam Barbosa · MRP Mobi · Carteira Digital</title>
-<meta name="description" content="Carteira digital MRP Mobi: pague, ganhe cashback na hora e construa uma rede de ganhos. Cadastro 100% gratuito com Vam Barbosa.">
+<title>Vamberto Barbosa · MRP Mobi · Campos dos Goytacazes - RJ</title>
+<meta name="description" content="Carteira digital MRP Mobi: pague, ganhe cashback na hora e construa uma rede de ganhos. Cadastro 100% gratuito com Vamberto Barbosa, em Campos dos Goytacazes - RJ.">
 <meta name="theme-color" content="#0a0a0a">
 
 <!-- Pré-visualização ao compartilhar o link (WhatsApp, Instagram, Facebook) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vam Barbosa · MRP Mobi · Carteira Digital">
-<meta property="og:description" content="Carteira digital MRP Mobi: pague, ganhe cashback na hora e construa uma rede de ganhos. Cadastro 100% gratuito com Vam Barbosa.">
+<meta property="og:title" content="Vamberto Barbosa · MRP Mobi · Campos dos Goytacazes - RJ">
+<meta property="og:description" content="Carteira digital MRP Mobi: pague, ganhe cashback na hora e construa uma rede de ganhos. Cadastro 100% gratuito com Vamberto Barbosa, em Campos dos Goytacazes - RJ.">
 <meta property="og:image" content="https://mrpmobi.digital/plotagem-mrp.png">
 
 <!-- Fontes: conexão antecipada + só os pesos usados (carrega mais rápido) -->
@@ -150,7 +150,8 @@
 
   /* ========== 4. Vídeos ========== */
   .video-card { background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio); overflow: hidden; }
-  .video-card video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+  .video-card video { width: 100%; aspect-ratio: 9 / 16; object-fit: contain; background: #000; }
+  #videos .grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 320px)); justify-content: center; }
   .video-label { padding: 12px 16px; background: var(--cor-superficie-2); color: var(--cor-principal); font-size: .9rem; font-weight: 600; }
 
   /* ========== 6. Prova social ========== */
@@ -250,6 +251,9 @@
   }
 
   /* ========== Extras da página do Vam ========== */
+  .afiliado-info { color: var(--cor-principal); letter-spacing: 1px; margin-bottom: 14px; font-weight: 600; }
+  .hero-video, .video-destaque video { width: 100%; max-width: 900px; margin: 32px auto 0; border-radius: 24px; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  .video-destaque { margin-bottom: 32px; }
   .hero-image { width: 100%; max-width: 900px; height: auto; margin: 32px auto 0; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
   .hero h1 { font-size: clamp(1.6rem, 5.5vw, 2.6rem); }
   .urgencia-box {
@@ -298,23 +302,26 @@
   <!-- ===================== 2. HERO (primeira dobra) ===================== -->
   <section class="section hero">
     <div class="container hero-inner">
+      <p class="afiliado-info">Vamberto Barbosa · Campos dos Goytacazes - RJ</p>
       <span class="selo">Cadastro 100% gratuito</span>
       <h1>Sua carteira digital que transforma compras do dia a dia em <span class="destaque">cashback</span> e em ganhos com a sua rede</h1>
-      <p class="hero-subtitulo">Use a MRP Mobi para pagar, receber descontos reais e construir uma rede que gera ganhos sempre que ela usa o app ou a carteira.</p>
+      <p class="hero-subtitulo">Use a MRP Mobi para pagar, receber descontos reais e construir uma rede que gera ganhos sempre que ela usa o app ou a carteira, direto da nossa região.</p>
 
       <div class="btn-group">
         <a href="https://convite.mrpmobi.com.br/register/747" class="btn btn-primary">Garantir minha vaga gratuita agora →</a>
-        <a href="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Falar com Vam Barbosa</a>
+        <a href="https://wa.me/5522999921997?text=Olá Vamberto Barbosa! Vi sua página da MRP Mobi em Campos dos Goytacazes e tenho uma dúvida." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Falar com Vamberto Barbosa</a>
         <a href="#videos" class="btn btn-secondary">Saiba mais</a>
       </div>
 
       <div class="urgencia-box">
         <p class="urgencia-titulo">⏳ A corrida pela sua rede já começou</p>
-        <p>A MRP Mobi é 100% gratuita. Se você não convidar seu vizinho ou amigo hoje, amanhã ele pode entrar com outro líder. Quem age primeiro, colhe primeiro.</p>
+        <p>A MRP Mobi é 100% gratuita. Se você não convidar seu vizinho ou amigo hoje, amanhã ele pode entrar com outro líder. Quem age primeiro sai na frente. <strong>Você vai esperar ou vai tomar a iniciativa?</strong></p>
       </div>
 
 
-      <img src="https://mrpmobi.digital/plotagem-mrp.png" alt="MRP Mobi: mobilidade e carteira digital" class="hero-image" fetchpriority="high" decoding="async">
+      <video class="hero-video" controls preload="none" playsinline poster="https://mrpmobi.digital/plotagem-mrp.png" aria-label="Vídeo de apresentação da MRP Mobi">
+        <source src="https://mrpmobi.digital/propaganda-mrpmobi.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
@@ -322,16 +329,21 @@
   <section class="section" id="beneficios">
     <div class="container">
       <h2 class="section-title">Carteira MRP Mobi: o coração do seu ecossistema de ganhos</h2>
+      <div class="video-destaque">
+        <video controls preload="none" playsinline aria-label="Vídeo sobre o ecossistema MRP Mobi">
+          <source src="https://mrpmobi.digital/ecossistema.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="grid">
         <article class="card">
           <div class="card-icon" aria-hidden="true">💳</div>
           <h3 class="card-title">Carteira Digital</h3>
-          <p>Use seu saldo para pagar compras em estabelecimentos parceiros. 30% do desconto volta para você na hora, como cashback. Tudo pelo app.</p>
+          <p>Use seu saldo para pagar compras em estabelecimentos parceiros. <strong>Você recebe cashback imediato de 30% fixo sobre o desconto oferecido pelo lojista.</strong> Tudo pelo app.</p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">💰</div>
           <h3 class="card-title">Cashback real</h3>
-          <p>Você recebe de volta parte do valor das suas compras. O desconto vem do parceiro, não é “dinheiro de ninguém”.</p>
+          <p>O desconto vem do parceiro, não é “dinheiro de ninguém”. 30% desse valor volta imediatamente para o cliente. O restante é distribuído em rede.</p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🌍</div>
@@ -376,20 +388,20 @@
 
       <div class="card exemplo">
         <h3 class="card-title">📊 Exemplo real: compra de R$ 1.000 com 10% de desconto</h3>
-        <p>Um cliente compra R$ 1.000 no seu estabelecimento usando a carteira MRP Mobi. Você concede 10% de desconto → <strong>R$ 100 vão para a carteira MRP</strong>.</p>
+        <p>Um cliente compra R$ 1.000 em um estabelecimento parceiro usando a carteira MRP Mobi. <strong>O empresário concede um desconto de 10%</strong> (percentual que ele define de acordo com a realidade do seu negócio). Esse desconto de <strong>R$ 100</strong> vai para a carteira MRP e é redistribuído assim:</p>
         <ul>
           <li>✅ <strong>30% (R$ 30)</strong> voltam como <strong>cashback imediato</strong> para o cliente.</li>
           <li>✅ Dos R$ 70 restantes, <strong>45% (R$ 31,50)</strong> são <strong>distribuídos para a rede</strong> (até o 7º nível).</li>
           <li>✅ <strong>55% (R$ 38,50)</strong> ficam com a MRP Mobi (tecnologia, expansão, operação).</li>
         </ul>
-        <p class="exemplo-nota">🔁 <strong>E o melhor para o empresário:</strong> se esse cliente comprar em outro estabelecimento credenciado, você <strong>continua ganhando</strong> como parte da rede.</p>
+        <p class="exemplo-nota">🔁 <strong>E o melhor para o empresário:</strong> se esse cliente comprar em outro estabelecimento credenciado, o empresário <strong>continua ganhando</strong> como parte da rede.</p>
       </div>
 
       <div class="grid">
         <article class="card">
           <span class="passo-numero">1</span>
           <h3 class="card-title">Empresário oferece desconto</h3>
-          <p>Você define o percentual (ex.: 10%). Esse valor vai para a carteira MRP Mobi.</p>
+          <p><strong>O empresário define o percentual de desconto que quer oferecer (ex.: 10%).</strong> Esse valor vai para a carteira MRP Mobi.</p>
         </article>
         <article class="card">
           <span class="passo-numero">2</span>
@@ -504,7 +516,7 @@
         </details>
         <details>
           <summary>Tenho uma empresa. Como participo?</summary>
-          <p>Você cadastra o CNPJ, define o percentual de desconto e passa a atrair clientes que usam a carteira MRP Mobi. Além disso, ganha quando seus clientes compram em outros parceiros credenciados. Veja o vídeo “Para empresários” acima ou fale com Vam Barbosa.</p>
+          <p>Você cadastra o CNPJ, define o percentual de desconto e passa a atrair clientes que usam a carteira MRP Mobi. Além disso, ganha quando seus clientes compram em outros parceiros credenciados. Veja o vídeo “Para empresários” acima ou fale com Vamberto Barbosa.</p>
         </details>
         <details>
           <summary>Sou motorista. Quanto fico de cada corrida?</summary>
@@ -518,15 +530,16 @@
   <section class="section" id="contato">
     <div class="container">
       <div class="cta">
-        <h2>Pronto para começar?</h2>
+        <h2>Pronto para começar em Campos dos Goytacazes e região?</h2>
         <p>Cadastro 100% gratuito. Você não precisa pagar nada para participar.</p>
         <div class="btn-group">
           <a href="https://convite.mrpmobi.com.br/register/747" class="btn btn-dark">Garantir minha vaga gratuita agora →</a>
-          <a href="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Falar com Vam Barbosa</a>
+          <a href="https://wa.me/5522999921997?text=Olá Vamberto Barbosa! Vi sua página da MRP Mobi em Campos dos Goytacazes e quero me cadastrar como usuário." class="btn btn-whatsapp" target="_blank" rel="noopener">💚 Quero me cadastrar (usuário)</a>
+          <a href="https://wa.me/5522999921997?text=Olá Vamberto Barbosa! Vi sua página e quero ser parceiro empresário com a carteira MRP Mobi em Campos dos Goytacazes." class="btn btn-dark" target="_blank" rel="noopener">🧡 Quero ser parceiro empresário</a>
         </div>
 
-        <form class="form-lead" id="formLead" data-whatsapp="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." data-marca="MRP Mobi">
-          <h3>Prefere que Vam Barbosa te chame?</h3>
+        <form class="form-lead" id="formLead" data-whatsapp="https://wa.me/5522999921997?text=Olá Vamberto Barbosa! Vi sua página da MRP Mobi em Campos dos Goytacazes e tenho uma dúvida." data-marca="MRP Mobi">
+          <h3>Prefere que Vamberto Barbosa te chame?</h3>
           <label for="leadNome">Seu nome</label>
           <input id="leadNome" name="nome" type="text" autocomplete="name" required>
           <label for="leadMensagem">Sua dúvida (opcional)</label>
@@ -544,7 +557,7 @@
         <h3 class="card-title">🚀 Mais Talentto</h3>
         <p>Esta página foi criada pela <strong>Mais Talentto</strong>, agência especializada em IA e presença digital.</p>
         <p>Quer ter sua própria página para divulgar a MRP Mobi?</p>
-        <a href="https://wa.me/5522998259862?text=Olá! Vim pela página de Vam Barbosa (MRP Mobi) e quero saber mais sobre as landing pages da Mais Talentto." class="btn btn-secondary" target="_blank" rel="noopener">Falar com a Mais Talentto →</a>
+        <a href="https://wa.me/5522998259862?text=Olá! Vim pela página de Vamberto Barbosa (MRP Mobi) e quero saber mais sobre as landing pages da Mais Talentto." class="btn btn-secondary" target="_blank" rel="noopener">Falar com a Mais Talentto →</a>
       </div>
     </div>
   </section>
@@ -561,7 +574,7 @@
 </footer>
 
 <!-- Botão flutuante do WhatsApp (sempre visível) -->
-<a href="https://wa.me/5522999921997?text=Olá! Vi sua página da MRP Mobi e tenho uma dúvida." class="whatsapp-flutuante" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Vam Barbosa">
+<a href="https://wa.me/5522999921997?text=Olá Vamberto Barbosa! Vi sua página da MRP Mobi em Campos dos Goytacazes e tenho uma dúvida." class="whatsapp-flutuante" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Vamberto Barbosa">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.7-5.7C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.2 3.1 1.3 3.3 2.3 3.5 5.6 4.9c2.1.9 2.9.9 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg>
 </a>
 
