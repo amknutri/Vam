@@ -25,6 +25,14 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
   - Cada robô v8 grava `heartbeat.json` na própria pasta a cada ciclo. Para o Cowork: robô vivo = campo `hora` com menos de 2 minutos.
   - `eventos.json` (na pasta de cada robô) lista CPI/FOMC; perto deles o robô não abre posição. Falta criar o arquivo com datas oficiais.
 
+## Backtest de 07/10/2026 (resultado central do projeto)
+
+- `backtest/backtest_estrategias.py` roda no PC (a nuvem não acessa a Binance), usa as funções do próprio robô, 2 anos (out/2024–set/2026), taxas, slippage, funding real. Resultados em `backtest/resultado_backtest_2026-10-07.*`.
+- **Nenhuma variante ganhou.** v8 confluência: fator de lucro 0,78, -96,7% em 2 anos, 352 dias batendo limite diário. Filtros (volume, tendência 4h, 10 maiores, sem trava de $10) ficaram entre 0,79 e 0,84. Donchian 10 moedas: 0,83 (LONG 1,24, mas só por um trade de XRP de +80R; 2º ano 0,50). Donchian BTC do robô: 0,92.
+- Velas ambíguas (stop e alvo na mesma hora): 0 a 3 por variante → a premissa conservadora não distorce o resultado.
+- Antes dos custos a confluência fica perto de zero; os custos (~0,2% por operação) a tornam fortemente negativa.
+- **Recomendação dada ao Vamberto:** não ir para dinheiro real com nenhuma dessas estratégias; aguardando decisão dele sobre o caminho (pesquisa sem prazo, testar código do sobrinho, ou encerrar trading ativo).
+
 ## Decisões tomadas (não rediscutir sem motivo novo)
 
 1. **v5 → v6:** 13 correções de segurança (chaves fora do código, stop registrado na exchange, fechamento só com confirmação, limite diário que zera à meia-noite e persiste em disco etc.).
@@ -91,7 +99,8 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Balanço da v8 na sexta 10/10 (separar azar de defeito).
 - [ ] Criar `eventos.json` com CPI/FOMC de out–nov/2026 (datas oficiais) e avisar o Cowork no Mural.
 - [ ] Telegram: novo token no BotFather + `setx TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`.
-- [ ] Backtest do filtro de volume (item 11) com e sem ele.
+- [x] Backtest do filtro de volume (item 11): não salva a estratégia (FL 0,82).
+- [ ] Vamberto decidir o caminho após o backtest (07/10).
 - [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
 - [ ] Criar conta Demo na BitGet para a v8 BitGet.
 - [ ] Comparar com o código do sobrinho quando chegar.

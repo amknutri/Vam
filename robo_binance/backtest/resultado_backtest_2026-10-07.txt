@@ -1,0 +1,62 @@
+BACKTEST DO ROBÔ DE FUTUROS — 2024-10-01 a 2026-10-01 — banca inicial $5,000
+Gerado em 2026-10-07T20:51:02 a partir de C:\RoboBinanceFuturos\bot_textual_v8_FUTUROS.py
+
+Régua da Demo: fator de lucro acima de 1,2, já com taxas.
+
+[A] v8 como está hoje (36 moedas, confluência)
+    Operações: 2899 (120.9/mês) | acerto 35.5%
+    Fator de lucro: 0.782 (1º ano 0.787, 2º ano 0.729)
+    Resultado: $-4837.6 (-96.75%, média -4.03%/mês) | queda máxima 96.87%
+    Taxas pagas: $2013.72 | funding: $44.66 | meses positivos 2/22
+    Com custos dobrados: fator de lucro 0.667, retorno -99.99%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[A1] v8 + filtro de volume ligado (item 11)
+    Operações: 2617 (109.1/mês) | acerto 38.4%
+    Fator de lucro: 0.819 (1º ano 0.819, 2º ano 0.821)
+    Resultado: $-4572.64 (-91.45%, média -3.81%/mês) | queda máxima 91.85%
+    Taxas pagas: $2591.96 | funding: $49.72 | meses positivos 6/25
+    Com custos dobrados: fator de lucro 0.606, retorno -99.74%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[A2] v8 + só a favor da tendência de 4h
+    Operações: 2129 (88.8/mês) | acerto 33.9%
+    Fator de lucro: 0.789 (1º ano 0.805, 2º ano 0.63)
+    Resultado: $-4742.32 (-94.85%, média -3.96%/mês) | queda máxima 95.1%
+    Taxas pagas: $1973.23 | funding: $-17.0 | meses positivos 3/23
+    Com custos dobrados: fator de lucro 0.683, retorno -98.61%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[A3] v8 sem a trava de ganho diário de $10
+    Operações: 3147 (131.2/mês) | acerto 36.1%
+    Fator de lucro: 0.838 (1º ano 0.846, 2º ano 0.698)
+    Resultado: $-4820.14 (-96.4%, média -4.02%/mês) | queda máxima 96.56%
+    Taxas pagas: $2824.22 | funding: $27.99 | meses positivos 4/22
+    Com custos dobrados: fator de lucro 0.628, retorno -99.99%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[B] v8 + tendência 4h + só 10 maiores + sem trava de $10
+    Operações: 2079 (86.7/mês) | acerto 34.2%
+    Fator de lucro: 0.799 (1º ano 0.82, 2º ano 0.725)
+    Resultado: $-4635.18 (-92.7%, média -3.87%/mês) | queda máxima 93.59%
+    Taxas pagas: $2354.99 | funding: $-29.37 | meses positivos 2/25
+    Com custos dobrados: fator de lucro 0.618, retorno -99.31%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[C] Seguir tendência (Donchian+ADX do robô) nas 10 maiores
+    Operações: 530 (22.1/mês) | acerto 10.8%
+    Fator de lucro: 0.825 (1º ano 0.962, 2º ano 0.571)
+    Resultado: $-2978.04 (-59.56%, média -2.48%/mês) | queda máxima 83.99%
+    Taxas pagas: $1157.42 | funding: $-336.81 | meses positivos 10/25
+    Com custos dobrados: fator de lucro 0.683, retorno -80.91%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+[C0] Donchian+ADX só no BTC, exatamente como está no robô (12,5%, 1x)
+    Operações: 84 (3.5/mês) | acerto 11.9%
+    Fator de lucro: 0.918 (1º ano 0.462, 2º ano 1.632)
+    Resultado: $-60.1 (-1.2%, média -0.05%/mês) | queda máxima 6.24%
+    Taxas pagas: $50.94 | funding: $-14.56 | meses positivos 7/24
+    Com custos dobrados: fator de lucro 0.831, retorno -2.68%
+    VEREDITO: PERDE dinheiro no período (não aprovaria)
+
+Moedas sem dados (ficaram de fora): SHIB
