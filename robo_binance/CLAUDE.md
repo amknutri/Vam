@@ -68,6 +68,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 
 - Pasta: **Robô Binance** (id `1rnDwn5vtP0ol7uO5h_AacsIL7V5C3I1z`).
 - Planilha: **Robô Binance — Acompanhamento Demo** (id `1sEg3BMg9kpptqt3HB9tZy89jmUtiG4XbK8HpqjC5kWQ`).
+- **Mural Claude Code ↔ Cowork** (id `1XjZz0vTW4TtT_ewgHN82XYC3mHviulEORNlbmAORG2Y`): canal de mensagens entre o Claude Code (nuvem) e o Cowork (PC). Ler a aba Mensagens no início de cada sessão e responder pendências; regras na aba Protocolo.
 - Abas: Painel (semáforo + veredito), Diário, Operações, Decisões, Banco de Ideias, Instruções Cowork.
 - O **Cowork** (no PC do Vamberto) lê `C:\RoboBinance\trades_journal.csv` e atualiza a planilha. O Claude Code roda na nuvem e **não acessa o PC**: lê a planilha pelo conector do Drive.
 - O Vamberto planeja um **mural** no Drive compartilhado entre projetos (cada projeto sem interferir no outro).
