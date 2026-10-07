@@ -20,7 +20,10 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
   - **v6.1 FUTUROS** em `C:\RoboBinanceFuturos` (Confluência, 3x, compra e venda, banca ~$5.000). A carteira de Futuros da Demo foi ativada abrindo demo.binance.com com o site em **English**.
 - **Stop na exchange validado na prática:** a internet caiu com SHORT em TRX aberto; a Binance executou o stop sozinha (LOSS -$7,75). Ordens Stop Market/Take Profit Market aparecem em Open Orders > Conditional.
 - **Bug encontrado na Demo e corrigido (v6.1/v7.1):** em Futuros a ordem a mercado volta sem preço médio; o robô usava o preço da tela (0,18% de diferença na TRX). Agora consulta o preço real.
-- **Meta do Vamberto:** conta real em **05/11/2026**. Plano proposto (aguardando aprovação): v8 com refinamentos até 12/10, estratégia congelada depois; real só com critérios cumpridos, começando com 10–20% do valor.
+- **Meta do Vamberto:** conta real em **05/11/2026**. Plano aprovado: v8 até 12/10, estratégia congelada depois; real só com critérios cumpridos, começando com 10–20% do valor.
+- **07/10/2026: v8 pronta e no GitHub** (`bot_textual_v8_FUTUROS.py` e `bot_textual_v8_SPOT.py`), aprovada pelo Vamberto (itens 1–5, heartbeat, 8 Telegram, 9 eventos, 10 funding, 11 volume desligado). Ainda **não instalada** no PC: falta guiar a troca v6.1→v8 Futuros e v7.1→v8 Spot.
+  - Cada robô v8 grava `heartbeat.json` na própria pasta a cada ciclo. Para o Cowork: robô vivo = campo `hora` com menos de 2 minutos.
+  - `eventos.json` (na pasta de cada robô) lista CPI/FOMC; perto deles o robô não abre posição. Falta criar o arquivo com datas oficiais.
 
 ## Decisões tomadas (não rediscutir sem motivo novo)
 
@@ -44,6 +47,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 
 | Arquivo | O que é |
 |---|---|
+| `bot_textual_v8_FUTUROS.py` / `bot_textual_v8_SPOT.py` | **Próxima versão** (marcas `[v8]`). Velas 1h, filtros de custo/funding/eventos, freio, breakeven, heartbeat. Testes 17/17 |
 | `bot_textual_v7_1_SPOT.py` | **Em uso (Spot).** v7 + preço real de execução |
 | `bot_textual_v6_1_FUTUROS.py` | **Em uso (Futuros).** v6 + preço real de execução |
 | `bot_textual_v7_SPOT.py` | Versão anterior do Spot. Spot, só compra, 1x, stop STOP_LOSS / STOP_LOSS_LIMIT na Binance, posições salvas em `posicoes_spot.json` |
@@ -82,7 +86,11 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Encaminhar a v7 e o relatório ao Lucas.
 - [ ] Configurar a tarefa do Cowork para atualizar a planilha.
 - [x] Stop na exchange validado (TRX, Futuros, durante queda de internet).
-- [ ] Vamberto aprovar o plano da v8 (refinamentos 1–8) até 12/10.
+- [x] Vamberto aprovou a v8; código pronto e testado.
+- [ ] Instalar a v8 nos dois robôs (passo a passo com o Vamberto).
+- [ ] Criar `eventos.json` com CPI/FOMC de out–nov/2026 (datas oficiais) e avisar o Cowork no Mural.
+- [ ] Telegram: novo token no BotFather + `setx TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`.
+- [ ] Backtest do filtro de volume (item 11) com e sem ele.
 - [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
 - [ ] Criar conta Demo na BitGet para a v8 BitGet.
 - [ ] Comparar com o código do sobrinho quando chegar.
