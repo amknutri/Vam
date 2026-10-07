@@ -15,16 +15,19 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 
 ## Status atual (atualizar a cada sessão)
 
-- **07/10/2026, 01:09:** robô **v7 SPOT** ligado na **Demo Spot** da Binance, estratégia **Confluência**, banca fictícia de **$5.000 USDT**.
-- Mercado em queda (tendência BAIXA): nenhuma compra até o momento. O filtro de tendência bloqueia compras contra a tendência (comportamento esperado).
-- Próximo marco: **1ª compra**. Conferir com o Vamberto se a ordem de **Stop** apareceu em demo.binance.com > Ordens > Ordem Spot.
+- **07/10/2026, 14:21:** dois robôs rodando na **Demo** da Binance, no PC do Vamberto:
+  - **v7.1 SPOT** em `C:\RoboBinance` (Confluência, 1x, só compra, banca $5.000). Sem posições ainda (mercado em queda).
+  - **v6.1 FUTUROS** em `C:\RoboBinanceFuturos` (Confluência, 3x, compra e venda, banca ~$5.000). A carteira de Futuros da Demo foi ativada abrindo demo.binance.com com o site em **English**.
+- **Stop na exchange validado na prática:** a internet caiu com SHORT em TRX aberto; a Binance executou o stop sozinha (LOSS -$7,75). Ordens Stop Market/Take Profit Market aparecem em Open Orders > Conditional.
+- **Bug encontrado na Demo e corrigido (v6.1/v7.1):** em Futuros a ordem a mercado volta sem preço médio; o robô usava o preço da tela (0,18% de diferença na TRX). Agora consulta o preço real.
+- **Meta do Vamberto:** conta real em **05/11/2026**. Plano proposto (aguardando aprovação): v8 com refinamentos até 12/10, estratégia congelada depois; real só com critérios cumpridos, começando com 10–20% do valor.
 
 ## Decisões tomadas (não rediscutir sem motivo novo)
 
 1. **v5 → v6:** 13 correções de segurança (chaves fora do código, stop registrado na exchange, fechamento só com confirmação, limite diário que zera à meia-noite e persiste em disco etc.).
 2. **Futuros → Spot (v7):** a Binance **não oferece Futuros a residentes no Brasil** (restrição da CVM, vigente em 2026). A Demo de Futuros redireciona para o Spot e o menu da conta real não tem "Derivativos".
 3. **VPN descartada:** a conta é verificada como brasileira, há risco de bloqueio com saldo dentro, não há recurso legal e a VPN impede a restrição de IP da chave. Não orientar uso de VPN.
-4. **BitGet Futuros:** fica no Banco de Ideias. Só será avaliada se a v7 Spot aprovar na Demo. A BitGet não tem autorização da CVM.
+4. **Futuros (decisão do Vamberto, 07/10):** o robô deve operar Futuros na Binance e na BitGet. Começa pela Demo (Binance já rodando com a v6.1; BitGet = v8 a criar). Dinheiro real em Futuros só com aprovação explícita dele, ciente dos riscos: Binance via site em outro idioma é zona cinzenta perante a CVM; BitGet não tem autorização da CVM. VPN continua descartada.
 5. **Critérios de aprovação da Demo** (definidos antes de começar, não mudar a régua depois):
    - **Zero** compras sem stop na Binance;
    - pelo menos **30 operações** fechadas;
@@ -41,7 +44,9 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 
 | Arquivo | O que é |
 |---|---|
-| `bot_textual_v7_SPOT.py` | **Versão em uso.** Spot, só compra, 1x, stop STOP_LOSS / STOP_LOSS_LIMIT na Binance, posições salvas em `posicoes_spot.json` |
+| `bot_textual_v7_1_SPOT.py` | **Em uso (Spot).** v7 + preço real de execução |
+| `bot_textual_v6_1_FUTUROS.py` | **Em uso (Futuros).** v6 + preço real de execução |
+| `bot_textual_v7_SPOT.py` | Versão anterior do Spot. Spot, só compra, 1x, stop STOP_LOSS / STOP_LOSS_LIMIT na Binance, posições salvas em `posicoes_spot.json` |
 | `bot_textual_v6_CORRIGIDA.py` | Versão Futuros com as correções de segurança (não utilizável no Brasil) |
 | `Relatorio_Robo_v7_SPOT.docx` | Relatório da v7 para o Lucas |
 | `Relatorio_Melhorias_Robo_v6.docx` | Relatório da v6 para o Lucas |
@@ -72,7 +77,10 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Vamberto apagar o txt das chaves e o `bot_textual_v5_ANTIGA.py`, e esvaziar a Lixeira.
 - [ ] Encaminhar a v7 e o relatório ao Lucas.
 - [ ] Configurar a tarefa do Cowork para atualizar a planilha.
-- [ ] Na 1ª compra: validar o stop na Binance Demo.
+- [x] Stop na exchange validado (TRX, Futuros, durante queda de internet).
+- [ ] Vamberto aprovar o plano da v8 (refinamentos 1–8) até 12/10.
+- [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
+- [ ] Criar conta Demo na BitGet para a v8 BitGet.
 - [ ] Comparar com o código do sobrinho quando chegar.
 
 ## Regras de trabalho neste projeto
