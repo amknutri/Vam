@@ -21,7 +21,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - **Stop na exchange validado na prática:** a internet caiu com SHORT em TRX aberto; a Binance executou o stop sozinha (LOSS -$7,75). Ordens Stop Market/Take Profit Market aparecem em Open Orders > Conditional.
 - **Bug encontrado na Demo e corrigido (v6.1/v7.1):** em Futuros a ordem a mercado volta sem preço médio; o robô usava o preço da tela (0,18% de diferença na TRX). Agora consulta o preço real.
 - **Meta do Vamberto:** conta real em **05/11/2026**. Plano aprovado: v8 até 12/10, estratégia congelada depois; real só com critérios cumpridos, começando com 10–20% do valor.
-- **07/10/2026: v8 pronta e no GitHub** (`bot_textual_v8_FUTUROS.py` e `bot_textual_v8_SPOT.py`), aprovada pelo Vamberto (itens 1–5, heartbeat, 8 Telegram, 9 eventos, 10 funding, 11 volume desligado). Ainda **não instalada** no PC: falta guiar a troca v6.1→v8 Futuros e v7.1→v8 Spot.
+- **07/10/2026: v8 pronta e no GitHub** (`bot_textual_v8_FUTUROS.py` e `bot_textual_v8_SPOT.py`), aprovada pelo Vamberto (itens 1–5, heartbeat, 8 Telegram, 9 eventos, 10 funding, 11 volume desligado). **Instalada no PC:** Futuros v8 às 17:19 e Spot v8 às 19:36 (v6.1/v7.1 continuam nas pastas como reserva). Futuros ficou PAUSADO (risco) no dia 07/10: 4 stops em vendas (TRX, LDO, RENDER, LDO) somaram -$111,16, acima do drawdown de 2% — comportamento correto. No dia seguinte o Vamberto precisa apertar L (não religa sozinho).
   - Cada robô v8 grava `heartbeat.json` na própria pasta a cada ciclo. Para o Cowork: robô vivo = campo `hora` com menos de 2 minutos.
   - `eventos.json` (na pasta de cada robô) lista CPI/FOMC; perto deles o robô não abre posição. Falta criar o arquivo com datas oficiais.
 
@@ -87,7 +87,8 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Configurar a tarefa do Cowork para atualizar a planilha.
 - [x] Stop na exchange validado (TRX, Futuros, durante queda de internet).
 - [x] Vamberto aprovou a v8; código pronto e testado.
-- [ ] Instalar a v8 nos dois robôs (passo a passo com o Vamberto).
+- [x] v8 instalada nos dois robôs (07/10). Mural avisado (heartbeat dos dois, limite de 2 min).
+- [ ] Balanço da v8 na sexta 10/10 (separar azar de defeito).
 - [ ] Criar `eventos.json` com CPI/FOMC de out–nov/2026 (datas oficiais) e avisar o Cowork no Mural.
 - [ ] Telegram: novo token no BotFather + `setx TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`.
 - [ ] Backtest do filtro de volume (item 11) com e sem ele.
