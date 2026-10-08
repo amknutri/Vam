@@ -80,8 +80,8 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 
 - Pasta: **Robô Binance** (id `1rnDwn5vtP0ol7uO5h_AacsIL7V5C3I1z`).
 - Planilha: **Robô Binance — Acompanhamento Demo** (id `1sEg3BMg9kpptqt3HB9tZy89jmUtiG4XbK8HpqjC5kWQ`).
-- **Mural Claude Code ↔ Cowork** (id `1XjZz0vTW4TtT_ewgHN82XYC3mHviulEORNlbmAORG2Y`): canal de mensagens entre o Claude Code (nuvem) e o Cowork (PC). Ler a aba Mensagens no início de cada sessão e responder pendências; regras na aba Protocolo.
-- **Horários fixos do Mural (Brasília):** 08h49 Cowork (checagem + resumo) → 09h15 Claude Code (rotina `trig_01W5dPYg2w2xgBU26Pb3xB15`) → 17h59 Cowork (2ª leitura, pedida) → 18h22 Claude Code (rotina `trig_01A9cMjrGErzRaUy4N5bjXgH`). Ninguém recebe aviso: só se lê nesses horários; urgências vão também ao Vamberto.
+- **Mural — Comunicação entre Projetos (Vamberto)** (id `1XjZz0vTW4TtT_ewgHN82XYC3mHviulEORNlbmAORG2Y`, agora na raiz do Meu Drive): desde 07/10/2026 é o canal COMUM entre todos os projetos e agentes. Colunas: Data/hora, Projeto, De, Para, Assunto, Mensagem, Status, Resposta. Abas: Mensagens, Protocolo, Projetos.
+- **Rotinas do robô DESATIVADAS em 07/10/2026** (projeto pausado): `trig_01W5dPYg2w2xgBU26Pb3xB15` (09h15) e `trig_01A9cMjrGErzRaUy4N5bjXgH` (18h22) — desligadas, não apagadas. Vamberto pediu ao Cowork para cancelar as dele (08h49 e 17h59).
 - **Painel (artefato do Cowork):** subpasta Drive "Robô Binance > Painel" (id `11L_RGjOv8_FQ62n-qOW6C_ErpmvBCK7e`); instruções `INSTRUCOES_CLAUDE_CODE_PAINEL.md` (id `1kpsdSRm1bEIYB6Q6RdtxQ0OTjX_hix5Z`), código atual `robo-binance-painel.html` (id `1mpwWD_Hs6sGMHcFjs2bu8N2VDUuHjhxW`). Entregar como `robo-binance-painel-v3.html` (não sobrescrever) e avisar no Mural. Prioridade depois da v8.
 - **Janelas dos robôs:** devem ficar VISÍVEIS (não minimizadas) até a v8 ter heartbeat.json — o Cowork não consegue restaurar janela minimizada.
 - Abas: Painel (semáforo + veredito), Diário, Operações, Decisões, Banco de Ideias, Instruções Cowork.
@@ -100,7 +100,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Criar `eventos.json` com CPI/FOMC de out–nov/2026 (datas oficiais) e avisar o Cowork no Mural.
 - [ ] Telegram: novo token no BotFather + `setx TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`.
 - [x] Backtest do filtro de volume (item 11): não salva a estratégia (FL 0,82).
-- [x] 08/10: Vamberto escolheu o caminho C (pausar trading ativo; foco na Mais Talentto). Capital que aceitaria arriscar: no máximo 5 mil. Meta dele de R$ 3.000/mês com robô é inviável com esse capital (exigiria ~60%/mês) — explicado. Robô fica como projeto de aprendizado: Demo pode seguir, backtest pronto para testar o código do sobrinho (caminho B).
+- [x] 07/10 (noite): Vamberto escolheu o caminho C (pausar trading ativo; foco na Mais Talentto). Capital que aceitaria arriscar: no máximo 5 mil. Meta dele de R$ 3.000/mês com robô é inviável com esse capital (exigiria ~60%/mês) — explicado. Robô fica como projeto de aprendizado: Demo pode seguir, backtest pronto para testar o código do sobrinho (caminho B).
 - [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
 - [ ] Criar conta Demo na BitGet para a v8 BitGet.
 - [ ] Comparar com o código do sobrinho quando chegar.
