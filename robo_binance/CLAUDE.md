@@ -100,7 +100,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [ ] Criar `eventos.json` com CPI/FOMC de out–nov/2026 (datas oficiais) e avisar o Cowork no Mural.
 - [ ] Telegram: novo token no BotFather + `setx TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`.
 - [x] Backtest do filtro de volume (item 11): não salva a estratégia (FL 0,82).
-- [ ] Vamberto decidir o caminho após o backtest (07/10).
+- [x] 08/10: Vamberto escolheu o caminho C (pausar trading ativo; foco na Mais Talentto). Capital que aceitaria arriscar: no máximo 5 mil. Meta dele de R$ 3.000/mês com robô é inviável com esse capital (exigiria ~60%/mês) — explicado. Robô fica como projeto de aprendizado: Demo pode seguir, backtest pronto para testar o código do sobrinho (caminho B).
 - [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
 - [ ] Criar conta Demo na BitGet para a v8 BitGet.
 - [ ] Comparar com o código do sobrinho quando chegar.
