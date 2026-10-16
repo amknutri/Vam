@@ -103,7 +103,7 @@ Leia este arquivo inteiro antes de qualquer ação neste projeto.
 - [x] 07/10 (noite): Vamberto escolheu o caminho C (pausar trading ativo; foco na Mais Talentto). Capital que aceitaria arriscar: no máximo 5 mil. Meta dele de R$ 3.000/mês com robô é inviável com esse capital (exigiria ~60%/mês) — explicado. Robô fica como projeto de aprendizado: Demo pode seguir, backtest pronto para testar o código do sobrinho (caminho B).
 - [ ] Resolver a verificação pendente da conta REAL da Binance (comprovante de residência; trade e depósito restritos).
 - [ ] Criar conta Demo na BitGet para a v8 BitGet.
-- [ ] Comparar com o código do sobrinho quando chegar.
+- [x] 16/10/2026: código do sobrinho (MORS-VIDA-SEM-FOME.py, "Cibele") analisado e testado com `backtest/backtest_sobrinho.py` (5m, 11 moedas, 2 anos). Configuração da tela (9x, 250 USDT, stop 8%, alvo 0,33%): 15.871 operações, acerto 80,9% (precisaria ~97%), fator de lucro 0,44, -R$ 385 mil sobre caixa de R$ 10 mil. Padrão 3x: FL 0,44. Stop automático: FL 0,53. Nenhuma versão viável. ALERTA: o arquivo tem chave de API REAL da Binance embutida (64 chars) e a tecla 5 troca para mercado real — orientado a revogar a chave. Os 10 arquivos .bat/.ps1/.exe enviados junto são utilitários de Windows, não de segurança do robô.
 
 ## Regras de trabalho neste projeto
 
