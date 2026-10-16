@@ -356,16 +356,16 @@ def main():
     for m in dados:
         sinais[m] = sinais_moeda(dados[m]["velas"])
     variantes = [
-        ("S1", "Configuração da tela: 9x, stop 8%, alvo 0,33%, margem US$ 235 por entrada (≈ R$ 1.220)",
-         dict(alav=9, margem_usdt=235, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
+        ("S1", "Configuração da tela: 9x, stop 8%, alvo 0,33%, entrada de 250 USDT de margem (como na tela)",
+         dict(alav=9, margem_usdt=250, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
         ("S2", "Padrão do código: 3x, stop 8%, alvo 0,33%, mesma margem",
-         dict(alav=3, margem_usdt=235, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
+         dict(alav=3, margem_usdt=250, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
         ("S3", "Stop automático (topo/fundo + ATR) e alvo 1,5x o risco, 9x",
-         dict(alav=9, margem_usdt=235, stop_manual=False, sl_pct=0, tp_pct=0, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
+         dict(alav=9, margem_usdt=250, stop_manual=False, sl_pct=0, tp_pct=0, taxa=0.0005, slip=0.0002, slip_entrada_robo=True)),
         ("S1-taxa-robo", "Igual à S1, com a taxa que o robô supõe (0,04% por lado)",
-         dict(alav=9, margem_usdt=235, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0004, slip=0.0002, slip_entrada_robo=True)),
+         dict(alav=9, margem_usdt=250, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0004, slip=0.0002, slip_entrada_robo=True)),
         ("S1-conservador", "Igual à S1, com taxa 0,05% e slippage 0,05% por lado",
-         dict(alav=9, margem_usdt=235, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0005, slip_entrada_robo=False)),
+         dict(alav=9, margem_usdt=250, stop_manual=True, sl_pct=8.0, tp_pct=0.33, taxa=0.0005, slip=0.0005, slip_entrada_robo=False)),
     ]
     log("\n[3/3] Simulando variantes...")
     res = {}
