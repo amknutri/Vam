@@ -20,6 +20,7 @@ Atualizado em 02/11/2026.
 4. **Memória (fim da conversa):** estudo de prós e contras enviado (Nº 82). Aguarda a opinião do Projeto Nanda; a decisão é do Vamberto.
 5. **Mural:** manutenção feita em 28/10 (coluna "Nº", aba "Arquivo", Protocolo atualizado). Assinaturas das sessões do Code registradas no Protocolo.
 6. **Inventário das sessões do Code:** enviado ao Chat Diretor (Nº 87), respondido. O Piloto IPTV da Cris é parte da Mais Talentto.
+7. **Repositórios públicos (02/11):** este repositório é público. Achados e uma proposta de convivência (páginas públicas + material interno em lugar privado) foram enviados ao responsável pela segurança, "Claude Code (nuvem · Sobra Real)", na Nº 106 e por mensagem direta. **A decisão final sobre segurança é dele.** Nada de outra sessão foi apagado ou movido.
 
 ### Decisões do Vamberto já tomadas
 
@@ -31,14 +32,15 @@ Atualizado em 02/11/2026.
 
 ### Próximos passos, em ordem
 
-1. Receber o PROMPT_NANDA_PRIME_V29.2 e revisar; responder no Mural (Nº 89).
-2. Acompanhar os testes novos (T14, T15, T16) e os refeitos (T6, T7, T13) com a V29.2.
-3. Teste dos modelos substitutos pelo Projeto Nanda até 15/12/2026; comparar e levar a recomendação ao Vamberto; trocar Nanda, Bia e Cris antes de 14/01/2027.
-4. Próxima fase do fluxo: mensagens repetidas e em rajada (desenho do Claude Code; mudança no Supabase só com o ok do Vamberto).
-5. Fechar a decisão da memória (Nº 82) com a opinião do Projeto Nanda.
-6. Próximo JSON entregue: sem id, desligado, funcionando ao importar; corrigir o "55" na legenda do comprovante.
-7. Núcleo Padrão: só depois da Nanda estável e da correção de segurança do banco aprovada (trava do Chat Diretor).
-8. Manutenção do Mural quando ele voltar a crescer, sempre com aviso prévio.
+1. Acompanhar a resposta do responsável pela segurança (Nº 106) e executar o que ele pedir. Se ele mover o material interno para um repositório privado, este CHECKLIST.md e o CLAUDE.md vão junto.
+2. Receber o PROMPT_NANDA_PRIME_V29.2 e revisar; responder no Mural (Nº 89).
+3. Acompanhar os testes novos (T14, T15, T16) e os refeitos (T6, T7, T13) com a V29.2.
+4. Teste dos modelos substitutos pelo Projeto Nanda até 15/12/2026; comparar e levar a recomendação ao Vamberto; trocar Nanda, Bia e Cris antes de 14/01/2027.
+5. Próxima fase do fluxo: mensagens repetidas e em rajada (desenho do Claude Code; mudança no Supabase só com o ok do Vamberto).
+6. Fechar a decisão da memória (Nº 82) com a opinião do Projeto Nanda.
+7. Próximo JSON entregue: sem id, desligado, funcionando ao importar; corrigir o "55" na legenda do comprovante.
+8. Núcleo Padrão: só depois da Nanda estável e da correção de segurança do banco aprovada (trava do Chat Diretor).
+9. Manutenção do Mural quando ele voltar a crescer, sempre com aviso prévio.
 
 ### Lembretes
 
