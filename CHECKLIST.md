@@ -5,7 +5,7 @@ Repositório público: só resumo e onde procurar. Detalhes no Mural e no Drive 
 
 ## Onde paramos
 
-Atualizado em 02/11/2026.
+Atualizado em 04/11/2026. Versão atual na branch `claude/stoic-darwin-qiy3zq` (continua a `claude/determined-maxwell-5hmarh`).
 
 ### Estado atual
 
@@ -22,6 +22,14 @@ Atualizado em 02/11/2026.
 6. **Inventário das sessões do Code:** enviado ao Chat Diretor (Nº 87), respondido. O Piloto IPTV da Cris é parte da Mais Talentto.
 7. **Repositórios públicos (02/11):** este repositório é público. Achados e uma proposta de convivência (páginas públicas + material interno em lugar privado) foram enviados ao responsável pela segurança, "Claude Code (nuvem · Sobra Real)", na Nº 106 e por mensagem direta. **A decisão final sobre segurança é dele.** Nada de outra sessão foi apagado ou movido.
 
+8. **PROBLEMA NOVO (relatado pelo Vamberto em 04/11, ainda não investigado): a responsável NÃO foi notificada.**
+   - Conversa de teste com a Nanda, à noite (22:51 a 22:54, fora do horário da farmácia). Cliente mandou um áudio de 6 s (pedido/preço).
+   - 22:52, Nanda: "Deixa eu confirmar o preço pra você — a Equipe te retorna com essa informação assim que possível! 😊"
+   - 22:54, cliente: "Quem vai me retornar?" Nanda: "A nossa equipe da farmácia entra em contato com você assim que puder, para confirmar a disponibilidade e o preço, tá? Qualquer coisa, estou aqui para ajudar também!"
+   - Resultado: o telefone de notificação da responsável não recebeu aviso nenhum. A Nanda prometeu um retorno que ninguém foi avisado para dar.
+   - Hipóteses para conferir (nenhuma confirmada): (a) a IA prometeu o retorno no texto, mas não gerou a tag que dispara o aviso; (b) o caminho do áudio (transcrição) não passa pelo aviso; (c) fora do horário o fluxo segura o aviso; (d) atraso ou falha de entrega para o número de notificação (já houve atrasos, Mural Nº 89, O5). Ver também se a 2ª resposta deveria ter dito que a loja estava fechada (regra de horário da V29.2).
+   - O print está com o Vamberto (não vai para este repositório público). Ainda não registrado no Mural.
+
 ### Decisões do Vamberto já tomadas
 
 - Escalonamento para atendente já no 1º pedido do cliente.
@@ -34,13 +42,14 @@ Atualizado em 02/11/2026.
 
 1. Acompanhar a resposta do responsável pela segurança (Nº 106) e executar o que ele pedir. Se ele mover o material interno para um repositório privado, este CHECKLIST.md e o CLAUDE.md vão junto.
 2. Receber o PROMPT_NANDA_PRIME_V29.2 e revisar; responder no Mural (Nº 89).
-3. Acompanhar os testes novos (T14, T15, T16) e os refeitos (T6, T7, T13) com a V29.2.
-4. Teste dos modelos substitutos pelo Projeto Nanda até 15/12/2026; comparar e levar a recomendação ao Vamberto; trocar Nanda, Bia e Cris antes de 14/01/2027.
-5. Próxima fase do fluxo: mensagens repetidas e em rajada (desenho do Claude Code; mudança no Supabase só com o ok do Vamberto).
-6. Fechar a decisão da memória (Nº 82) com a opinião do Projeto Nanda.
-7. Próximo JSON entregue: sem id, desligado, funcionando ao importar; corrigir o "55" na legenda do comprovante.
-8. Núcleo Padrão: só depois da Nanda estável e da correção de segurança do banco aprovada (trava do Chat Diretor).
-9. Manutenção do Mural quando ele voltar a crescer, sempre com aviso prévio.
+3. Investigar o problema da notificação (item 8 do Estado atual): achar a execução no n8n, ver se a tag saiu e onde o aviso parou; levar o diagnóstico ao Vamberto e registrar no Mural.
+4. Acompanhar os testes novos (T14, T15, T16) e os refeitos (T6, T7, T13) com a V29.2.
+5. Teste dos modelos substitutos pelo Projeto Nanda até 15/12/2026; comparar e levar a recomendação ao Vamberto; trocar Nanda, Bia e Cris antes de 14/01/2027.
+6. Próxima fase do fluxo: mensagens repetidas e em rajada (desenho do Claude Code; mudança no Supabase só com o ok do Vamberto).
+7. Fechar a decisão da memória (Nº 82) com a opinião do Projeto Nanda.
+8. Próximo JSON entregue: sem id, desligado, funcionando ao importar; corrigir o "55" na legenda do comprovante.
+9. Núcleo Padrão: só depois da Nanda estável e da correção de segurança do banco aprovada (trava do Chat Diretor).
+10. Manutenção do Mural quando ele voltar a crescer, sempre com aviso prévio.
 
 ### Lembretes
 
